@@ -1,0 +1,33 @@
+---
+model:
+    model_name: binary_classification_model
+    model_path: binary_classification_model.pth
+    num_classes: 2
+
+preprocessing:
+    resize: 256
+    crop: 224
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+
+labels:
+    - salad
+    - soup
+
+epochs: 18
+
+learning_rate: .002
+
+gradient_clipping: false
+
+gradient_norm_value: 1.2
+
+use_summary_writer: false
+
+plot_confusion_matrix: true
+
+plot_loss_curves: true
+
+training_seeds: 689
+
+use_cuda: true
